@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Jigyasa Jha | Legal & Compliance + Legal Tech</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio website of Jigyasa Jha – Legal & Compliance, Litigation Support, and Legal Tech." />
+  <style>
+    :root {
+      --bg-dark: #060814;
+      --bg-alt: #0f172a;
+      --accent: #eab308; /* gold */
+      --accent-soft: rgba(234, 179, 8, 0.15);
+      --text-main: #e5e7eb;
+      --text-muted: #9ca3af;
+      --border-subtle: rgba(148, 163, 184, 0.25);
+      --card-radius: 1.25rem;
+      --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.75);
+      --max-width: 1120px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      background: radial-gradient(circle at top, #111827 0, #020617 55%, #000 100%);
+      color: var(--text-main);
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .wrapper {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+
+    /* NAVBAR */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      backdrop-filter: blur(14px);
+      background: linear-gradient(
+        to bottom,
+        rgba(15, 23, 42, 0.95),
+        rgba(15, 23, 42, 0.6),
+        transparent
+      );
+      border-bottom: 1px solid rgba(51, 65, 85, 0.5);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.8rem 0;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .logo-circle {
+      width: 32px;
+      height: 32px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      font-size: 0.95rem;
+      background: radial-gradient(circle at top, #1f2937, #020617);
+      color: var(--accent);
+    }
+
+    .brand-text {
+      font-size: 0.95rem;
+    }
+
+    .brand-text span {
+      display: block;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--text-muted);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.8rem;
+      font-size: 0.9rem;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -0.2rem;
+      width: 0%;
+      height: 1px;
+      background: var(--accent);
+      transition: width 0.25s ease;
+    }
+
+    .nav-links a:hover {
+      color: #f9fafb;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-cta {
+      font-size: 0.85rem;
+      padding: 0.45rem 0.95rem;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      border: 1px solid rgba(234, 179, 8, 0.7);
+      color: #fefce8;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      cursor: pointer;
+    }
+
+    .nav-cta span {
+      font-size: 0.9rem;
+    }
+
+    .nav-cta:hover {
+      background: rgba(234, 179, 8, 0.22);
+    }
+
+    .nav-toggle {
+      display: none;
+      border: 1px solid rgba(148, 163, 184, 0.7);
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      align-items: center;
+      justify-content: center;
+      background: rgba(15, 23, 42, 0.8);
+      cursor: pointer;
+    }
+
+    .nav-toggle span {
+      width: 17px;
+      height: 2px;
+      background: #e5e7eb;
+      border-radius: 999px;
+      position: relative;
+    }
+
+    .nav-toggle span::before,
+    .nav-toggle span::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 17px;
+      height: 2px;
+      background: #e5e7eb;
+      border-radius: 999px;
+    }
+
+    .nav-toggle span::before {
+      top: -5px;
+    }
+
+    .nav-toggle span::after {
+      top: 5px;
+    }
+
+    /* HERO */
+    .hero {
+      padding: 3.5rem 0 3rem;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2.4fr);
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    .eyebrow {
+      font-size: 0.8rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.3rem, 3vw, 2.9rem);
+      line-height: 1.15;
+      margin-bottom: 1rem;
+    }
+
+    .hero h1 span {
+      color: var(--accent);
+    }
+
+    .hero-sub {
+      font-size: 0.98rem;
+      color: var(--text-muted);
+      max-width: 34rem;
+      margin-bottom: 1.4rem;
+    }
+
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+      margin-bottom: 1.8rem;
+    }
+
+    .tag {
+      font-size: 0.8rem;
+      padding: 0.25rem 0.7rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      background: rgba(15, 23, 42, 0.85);
+      color: var(--text-muted);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.9rem;
+      align-items: center;
+    }
+
+    .btn-primary,
+    .btn-ghost {
+      font-size: 0.9rem;
+      padding: 0.55rem 1.1rem;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #eab308, #facc15);
+      color: #111827;
+      font-weight: 600;
+      box-shadow: 0 14px 30px rgba(234, 179, 8, 0.28);
+    }
+
+    .btn-primary:hover {
+      filter: brightness(1.03);
+    }
+
+    .btn-ghost {
+      border-color: rgba(148, 163, 184, 0.6);
+      color: var(--text-muted);
+      background: rgba(15, 23, 42, 0.9);
+    }
+
+    .btn-ghost:hover {
+      border-color: rgba(226, 232, 240, 0.9);
+      color: #f9fafb;
+    }
+
+    .hero-right {
+      position: relative;
+    }
+
+    .hero-card {
+      background: radial-gradient(circle at top left, #1f2937 0, #020617 55%);
+      border-radius: 1.6rem;
+      padding: 1.3rem 1.4rem 1.5rem;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      box-shadow: var(--shadow-soft);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(
+        circle at top right,
+        rgba(234, 179, 8, 0.15),
+        transparent 55%
+      );
+      opacity: 0.9;
+      pointer-events: none;
+    }
+
+    .hero-stat-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 0.75rem;
+      margin-bottom: 1.1rem;
+    }
+
+    .pill {
+      font-size: 0.72rem;
+      padding: 0.25rem 0.65rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.55);
+      color: var(--text-muted);
+      background: rgba(15, 23, 42, 0.95);
+    }
+
+    .hero-stat-main {
+      border-radius: 1.2rem;
+      padding: 0.85rem 0.9rem;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      background: rgba(15, 23, 42, 0.95);
+      margin-bottom: 1rem;
+    }
+
+    .hero-stat-main h3 {
+      font-size: 0.86rem;
+      text-transform: uppercase;
+      letter-spacing: 0.13em;
+      color: var(--text-muted);
+      margin-bottom: 0.4rem;
+    }
+
+    .hero-stat-main p {
+      font-size: 0.9rem;
+      color: var(--text-main);
+    }
+
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.7rem;
+      font-size: 0.75rem;
+    }
+
+    .stat-chip {
+      border-radius: 0.9rem;
+      padding: 0.55rem 0.6rem;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(55, 65, 81, 0.85);
+      text-align: left;
+    }
+
+    .stat-chip span {
+      display: block;
+    }
+
+    .stat-label {
+      font-size: 0.68rem;
+      color: var(--text-muted);
+    }
+
+    .stat-value {
+      font-weight: 600;
+      color: #e5e7eb;
+    }
+
+    /* Sections */
+    section {
+      padding: 2.5rem 0 1.5rem;
+    }
+
+    .section-heading {
+      font-size: 1.1rem;
+      margin-bottom: 1.4rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .section-heading span {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--accent);
+    }
+
+    /* Experience */
+    .two-col {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2.5fr);
+      gap: 2.1rem;
+      align-items: flex-start;
+    }
+
+    .card {
+      border-radius: var(--card-radius);
+      border: 1px solid var(--border-subtle);
+      background: rgba(15, 23, 42, 0.94);
+      padding: 1.1rem 1.25rem;
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.8);
+    }
+
+    .experience-item + .experience-item {
+      margin-top: 1.15rem;
+      padding-top: 1rem;
+      border-top: 1px dashed rgba(55, 65, 81, 0.7);
+    }
+
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .exp-role {
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .exp-org {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .exp-meta {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .exp-bullets {
+      list-style: disc;
+      padding-left: 1rem;
+      margin-top: 0.35rem;
+      font-size: 0.86rem;
+      color: var(--text-muted);
+    }
+
+    .exp-bullets li + li {
+      margin-top: 0.18rem;
+    }
+
+    /* Skills */
+    .pill-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+    }
+
+    .pill.skill {
+      border-color: rgba(148, 163, 184, 0.9);
+      background: rgba(15, 23, 42, 0.97);
+    }
+
+    .pill.skill-strong {
+      border-color: rgba(234, 179, 8, 0.94);
+      background: rgba(234, 179, 8, 0.07);
+      color: #fefce8;
+    }
+
+    /* Projects */
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .project-card {
+      border-radius: 1.1rem;
+      border: 1px solid var(--border-subtle);
+      background: rgba(15, 23, 42, 0.94);
+      padding: 0.9rem 0.95rem 1rem;
+      font-size: 0.86rem;
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.9);
+    }
+
+    .project-card h3 {
+      font-size: 0.9rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .project-meta {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-bottom: 0.35rem;
+    }
+
+    /* Contact */
+    .contact-box {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.25rem;
+      align-items: center;
+      justify-content: space-between;
+      border-radius: 1.3rem;
+      padding: 1.2rem 1.4rem;
+      background: radial-gradient(circle at top left, #1f2937, #020617 60%);
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      box-shadow: var(--shadow-soft);
+      margin-bottom: 2.5rem;
+    }
+
+    .contact-text {
+      max-width: 30rem;
+    }
+
+    .contact-text h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .contact-text p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .contact-actions {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    footer {
+      padding: 1.4rem 0 1.6rem;
+      border-top: 1px solid rgba(31, 41, 55, 0.9);
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    footer a {
+      color: var(--text-muted);
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity 0.55s ease, transform 0.55s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .hero-grid,
+      .two-col,
+      .project-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .hero {
+        padding-top: 2.3rem;
+      }
+      .hero-grid {
+        gap: 2rem;
+      }
+      .hero-right {
+        order: -1;
+      }
+      .nav-links {
+        position: absolute;
+        inset: 56px 0 auto 0;
+        padding: 0.75rem 1.25rem 1rem;
+        background: rgba(15, 23, 42, 0.97);
+        border-bottom: 1px solid rgba(51, 65, 85, 0.75);
+        flex-direction: column;
+        display: none;
+      }
+      .nav-links.open {
+        display: flex;
+      }
+      .nav-toggle {
+        display: inline-flex;
+      }
+      .nav-cta {
+        display: none;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .hero-card {
+        padding: 1.1rem 1.1rem 1.25rem;
+      }
+      .card {
+        padding: 1rem;
+      }
+      .contact-box {
+        padding: 1rem 1.05rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrapper nav">
+      <div class="nav-left">
+        <div class="logo-circle">JJ</div>
+        <div class="brand-text">
+          <strong>Jigyasa Jha</strong>
+          <span>Legal & Compliance · Legal Tech</span>
+        </div>
+      </div>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+        <span>Let’s work together</span> →
+      </button>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="about">
+      <div class="wrapper hero-grid">
+        <div>
+          <div class="eyebrow">Legal & Compliance · Litigation Support · Legal Tech</div>
+          <h1>
+            I help legal teams turn
+            <span>messy information</span>
+            into clean, compliant decisions.
+          </h1>
+          <p class="hero-sub">
+            I’m Jigyasa Jha, a Legal & Research Compliance Analyst and Legal Tech
+            assistant. I review records, transcripts, and stakeholder data for
+            accuracy and risk, and design workflows that make it easier for
+            lawyers and researchers to do high-stakes work at speed.
+          </p>
+
+          <div class="hero-tags">
+            <span class="tag">Document & Transcript Review</span>
+            <span class="tag">HIPAA / Privacy Awareness</span>
+            <span class="tag">Policy & Regulatory Research</span>
+            <span class="tag">Litigation Support</span>
+            <span class="tag">AI-Driven Workflows</span>
+          </div>
+
+          <div class="hero-actions">
+            <button class="btn-primary" onclick="document.getElementById('experience').scrollIntoView({behavior:'smooth'})">
+              View my experience →
+            </button>
+            <a class="btn-ghost" href="#contact">
+              Contact me
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <div class="hero-card fade-in">
+            <div class="hero-stat-row">
+              <span class="pill">Litigation · Health Policy · Legal Tech</span>
+              <span class="pill">Based in Atlanta · NYC-ready</span>
+            </div>
+            <div class="hero-stat-main">
+              <h3>Recent Focus</h3>
+              <p>
+                Reviewing medical records, client statements, and stakeholder
+                interviews for accuracy and compliance, while building
+                tech-enabled workflows that keep everything organized and
+                audit-ready.
+              </p>
+            </div>
+            <div class="stat-grid">
+              <div class="stat-chip">
+                <span class="stat-label">Review Volume</span>
+                <span class="stat-value">200+ docs / term</span>
+              </div>
+              <div class="stat-chip">
+                <span class="stat-label">Typing Speed</span>
+                <span class="stat-value">82 WPM</span>
+              </div>
+              <div class="stat-chip">
+                <span class="stat-label">Environments</span>
+                <span class="stat-value">Law Firm · Policy Lab · AI Startup</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE & EDUCATION -->
+    <section id="experience">
+      <div class="wrapper two-col">
+        <div class="fade-in">
+          <div class="section-heading">
+            <h2>Experience</h2>
+            <span>What I work on</span>
+          </div>
+
+          <div class="card">
+            <div class="experience-item">
+              <div class="exp-header">
+                <div>
+                  <div class="exp-role">Legal Tech & Litigation Assistant Intern</div>
+                  <div class="exp-org">The Law Office of Don Edwards, LLC · Personal Injury</div>
+                </div>
+                <div class="exp-meta">May 2025 – Present · Atlanta, GA</div>
+              </div>
+              <ul class="exp-bullets">
+                <li>
+                  Proofread and review litigation documents, client statements, medical
+                  records, and deposition summaries for accuracy, completeness, and
+                  confidentiality.
+                </li>
+                <li>
+                  Screen expert materials and discovery outputs, flagging inconsistencies
+                  and potential risk areas before attorney review.
+                </li>
+                <li>
+                  Draft and format motions, discovery responses, briefs, and structured
+                  case summaries using standardized legal styles.
+                </li>
+                <li>
+                  Maintain OCR-driven evidence systems and structured folders to keep
+                  records audit-ready and easy to navigate.
+                </li>
+              </ul>
+            </div>
+
+            <div class="experience-item">
+              <div class="exp-header">
+                <div>
+                  <div class="exp-role">Policy & Regulatory Research Assistant</div>
+                  <div class="exp-org">Georgia Health Policy Center</div>
+                </div>
+                <div class="exp-meta">Mar 2025 – Present · Atlanta, GA</div>
+              </div>
+              <ul class="exp-bullets">
+                <li>
+                  Conduct legal and regulatory research on digital health regulation,
+                  HIPAA compliance, and privacy frameworks.
+                </li>
+                <li>
+                  Review stakeholder interview transcripts and written outputs for
+                  clarity, anonymization, and alignment with policy expectations.
+                </li>
+                <li>
+                  Support multi-project operations through consistent documentation
+                  standards and deadline tracking across teams.
+                </li>
+              </ul>
+            </div>
+
+            <div class="experience-item">
+              <div class="exp-header">
+                <div>
+                  <div class="exp-role">Legal Operations / Intake Systems Intern</div>
+                  <div class="exp-org">AI-Driven PI Compliance Startup</div>
+                </div>
+                <div class="exp-meta">2024 · Remote</div>
+              </div>
+              <ul class="exp-bullets">
+                <li>
+                  Helped design an AI-powered intake and compliance platform for
+                  plaintiff-side personal injury firms.
+                </li>
+                <li>
+                  Screened and validated intake data and auto-generated transcripts for
+                  accuracy and policy adherence.
+                </li>
+                <li>
+                  Translated HIPAA and privacy requirements into intake workflows,
+                  conflict-check prompts, and calendaring triggers.
+                </li>
+              </ul>
+            </div>
+
+            <div class="experience-item">
+              <div class="exp-header">
+                <div>
+                  <div class="exp-role">Mock Trial Juror (Selected Participant)</div>
+                  <div class="exp-org">Troutman Pepper · AmLaw 50</div>
+                </div>
+                <div class="exp-meta">Apr 2025 · Atlanta, GA</div>
+              </div>
+              <ul class="exp-bullets">
+                <li>
+                  Evaluated evidence and attorney arguments in an internal mock trial
+                  and provided structured feedback on case theory and clarity.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <aside class="fade-in">
+          <div class="section-heading">
+            <h2>Education</h2>
+            <span>Foundations</span>
+          </div>
+
+          <div class="card" style="margin-bottom:1.1rem;">
+            <div class="exp-header">
+              <div>
+                <div class="exp-role">Georgia State University</div>
+                <div class="exp-org">
+                  B.S. Computer Science & · B.A. Political Science (Dual Major)
+                </div>
+              </div>
+              <div class="exp-meta">Grad. May 2026 · GPA 3.5+</div>
+            </div>
+            <ul class="exp-bullets">
+              <li>
+                Coursework: Privacy & Cybersecurity, Judicial Process, American Law,
+                International Relations, Algorithms, Computer Architecture.
+              </li>
+              <li>
+                Legal Field School: observed proceedings at Georgia Supreme Court, Court
+                of Appeals, Superior, State, Magistrate, and Municipal courts; interviewed
+                judges, prosecutors, public defenders, and clerks on litigation workflows.
+              </li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3 style="font-size:0.95rem;margin-bottom:0.4rem;">Highlights & Recognition</h3>
+            <ul class="exp-bullets">
+              <li>Distinguished Delegation — National Model United Nations (UN HQ).</li>
+              <li>Impact Challenge Winner — Harvard HPAIR.</li>
+              <li>Best Use of MongoDB — HackGT X, for a policy-analysis tool.</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="wrapper fade-in">
+        <div class="section-heading">
+          <h2>Selected Projects</h2>
+          <span>Law · Policy · Tech</span>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card">
+            <h3>Privacy Policy Analyzer</h3>
+            <div class="project-meta">HackGT Winner · MongoDB · NLP</div>
+            <p>
+              Built an AI-assisted policy and contract review tool that classifies
+              compliance documents, surfaces key obligations, and supports fast search
+              across large policy sets.
+            </p>
+          </article>
+
+          <article class="project-card">
+            <h3>AI Compliance Chatbot</h3>
+            <div class="project-meta">HackATL · Python · GPT · Flask</div>
+            <p>
+              Designed a chatbot that explains regulatory concepts to founders in clear
+              language, turning dense legal text into practical, step-by-step guidance.
+            </p>
+          </article>
+
+          <article class="project-card">
+            <h3>GaiaForge</h3>
+            <div class="project-meta">Founder · ESG & Regulatory Tech</div>
+            <p>
+              Created a policy-intelligence concept for sustainability startups, mapping
+              ESG rules and connecting founders with relevant policymakers and investors.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <div class="wrapper fade-in">
+        <div class="section-heading">
+          <h2>Skills</h2>
+          <span>How I work</span>
+        </div>
+
+        <div class="card">
+          <h3 style="font-size:0.9rem;margin-bottom:0.5rem;">Legal & Compliance</h3>
+          <div class="pill-grid" style="margin-bottom:0.9rem;">
+            <span class="pill skill-strong">Document & transcript review</span>
+            <span class="pill skill-strong">Accuracy & consistency checks</span>
+            <span class="pill skill">HIPAA / privacy awareness</span>
+            <span class="pill skill">Case chronology building</span>
+            <span class="pill skill">Litigation support</span>
+            <span class="pill skill">Regulatory & policy research</span>
+          </div>
+
+          <h3 style="font-size:0.9rem;margin-bottom:0.5rem;">Tools & Tech</h3>
+          <div class="pill-grid" style="margin-bottom:0.9rem;">
+            <span class="pill skill-strong">Microsoft Word (styles, citations)</span>
+            <span class="pill skill-strong">Excel (VLOOKUP, pivots)</span>
+            <span class="pill skill">PowerPoint</span>
+            <span class="pill skill">Adobe Acrobat</span>
+            <span class="pill skill">OCR tools</span>
+            <span class="pill skill">Python · SQL · MongoDB</span>
+            <span class="pill skill">Git/GitHub</span>
+          </div>
+
+          <h3 style="font-size:0.9rem;margin-bottom:0.5rem;">Ways of Working</h3>
+          <div class="pill-grid">
+            <span class="pill skill-strong">Fast, precise execution</span>
+            <span class="pill skill">Clear written communication</span>
+            <span class="pill skill">Stakeholder coordination</span>
+            <span class="pill skill">Public speaking (Model UN)</span>
+            <span class="pill skill">Process & workflow design</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+<section id="contact">
+  <div class="wrapper fade-in">
+    <div class="section-heading">
+      <h2>Contact</h2>
+      <span>Let’s talk</span>
+    </div>
+
+    <div class="contact-box">
+      <div class="contact-text">
+        <h3>Need someone who loves details a little too much?</h3>
+        <p>
+          Whether you’re looking for legal & compliance support, litigation-adjacent
+          work, or help building tech-enabled workflows for your practice, I’d love
+          to connect. Email is the easiest way to reach me, but LinkedIn works too.
+        </p>
+      </div>
+
+      <div class="contact-actions">
+        <!-- PRIMARY: EMAIL -->
+        <a class="btn-primary" href="mailto:jhajigyasa5@gmail.com">
+          Email me
+        </a>
+
+        <!-- LinkedIn -->
+        <a
+          class="btn-ghost"
+          href="https://www.linkedin.com/in/jigyasa-j-5667a11b1/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View LinkedIn profile
+        </a>
+
+        <!-- RESUME (YOUR GOOGLE DRIVE LINK) -->
+        <a
+          class="btn-ghost"
+          href="https://drive.google.com/file/d/1C4YhWBsvIF4Dad12GwVg2oZAgQDlhWG2/view?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View my résumé
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <footer>
+    <div class="wrapper">
+      <div style="display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;">
+        <span>© <span id="year"></span> Jigyasa Jha. All rights reserved.</span>
+        <span>
+          Built with HTML, CSS &amp; vanilla JS. Designed for legal, compliance, and
+          legal tech roles.
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // mobile nav
+    const navToggle = document.getElementById("navToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    navToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("open");
+    });
+
+    // close nav on link click (mobile)
+    navLinks.querySelectorAll("a").forEach((a) => {
+      a.addEventListener("click", () => navLinks.classList.remove("open"));
+    });
+
+    // year in footer
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // fade-in on scroll
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+
+    document.querySelectorAll(".fade-in").forEach((el) => observer.observe(el));
+  </script>
+</body>
+</html>

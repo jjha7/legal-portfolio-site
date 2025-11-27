@@ -1,0 +1,33 @@
+.btn-primary {
+  display: inline-block;
+  padding: 12px 22px;
+  background: #1e4dd8;
+  color: #fff;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s ease;
+  margin-right: 10px;
+}
+
+.btn-primary:hover {
+  background: #163aa5;
+  transform: translateY(-2px);
+}
+
+.btn-ghost {
+  display: inline-block;
+  padding: 12px 22px;
+  border: 2px solid #1e4dd8;
+  color: #1e4dd8;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: 10px;
+  transition: 0.3s ease;
+}
+
+.btn-ghost:hover {
+  background: #1e4dd82a;
+  transform: translateY(-2px);
+}
